@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="protocol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="password" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="demorec" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="map_choice" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="cmd_line_option">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="form_name" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="form_instructions" type="xs:string" use="required" />
+                  <xs:attribute name="cmd_line_parameter" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="type_choice" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="cmd_line_option">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="form_name" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="form_instructions" type="xs:string" use="required" />
+                  <xs:attribute name="cmd_line_parameter" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="generic_choice" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="cmd_line_option">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="form_name" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="form_instructions" type="xs:string" use="required" />
+                  <xs:attribute name="cmd_line_parameter" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="switch" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="form_name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="condition" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

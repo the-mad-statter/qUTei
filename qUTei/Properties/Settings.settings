@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="qUTei.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UT2004_HOME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Unreal Anthology\UT2004</Value>
+    </Setting>
+    <Setting Name="ADMIN_PASS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

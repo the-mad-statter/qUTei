@@ -1,0 +1,1135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--condition ("Choice" in this case) must be one word-->
+<protocol condition="Choice">
+  <!--form_name and form_instructions are what will show up as human readable in the choice windows-->
+  <game form_name="Practice">
+    <!--leave password empty to have no password to start that game-->
+    <password></password>
+    <!--use "true" or "false" here not "True" and not "False"-->
+    <demorec>true</demorec>
+    <!--make sure you have all the map names installed and correctly match-->
+    <!--this is the first time you can add additional cmd_line_options to allow the participant to choose-->
+    <!--this example is no choice because there is only one cmd_line_option-->
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Practice">Practice</cmd_line_option>
+    </map_choice>
+    <!--you will probably not change this one-->
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <!--this sets the time limit (3 minutes in this case)-->
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <!--Difficulty goes from 0-7-->
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <!--may be neccessary if bonus vehicle mutator is installed-->
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <!--this is only for baseline as you did not want it in other games-->
+    <generic_choice form_instructions="Choose your mutator:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="Rootator">ROOtator.MutRoos</cmd_line_option>
+    </generic_choice>
+    <!--you will always probably want this one-->
+    <generic_choice form_instructions="Choose your mutator:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <!--use bAutoNumBots=, NumBots=, and MinPlayers= to ensure control of number of bots-->
+    <!--side note - bot rosters in the ini used to control actual bots selected to fill these positions-->
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <!--choose number of bots-->
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="0">0</cmd_line_option>
+    </generic_choice>
+    <!--set this to number of bots plus one for player-->
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+    </generic_choice>
+    <!--will always want these switches and may need additional ones-->
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+  
+  
+  <game form_name="Baseline 1">
+    <password>b1</password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_BL">Map_BL</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+  
+
+  <game form_name="Baseline 2">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_BL">Map_BL</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 1 Game 1">
+    <password>s1</password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+  
+  <game form_name="Session 1 Game 2">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+  
+  <game form_name="Session 1 Game 3">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+  
+
+  <game form_name="Session 1 Game 4">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 1 Game 5">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 2 Game 1">
+    <password>s2</password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 2 Game 2">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 2 Game 3">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 2 Game 4">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 2 Game 5">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 3 Game 1">
+    <password>s3</password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 3 Game 2">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 3 Game 3">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 3 Game 4">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Session 3 Game 5">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_1">Map_1</cmd_line_option>
+      <cmd_line_option form_name="Map_2">Map_2</cmd_line_option>
+      <cmd_line_option form_name="Map_3">Map_3</cmd_line_option>
+      <cmd_line_option form_name="Map_4">Map_4</cmd_line_option>
+      <cmd_line_option form_name="Map_5">Map_5</cmd_line_option>
+      <cmd_line_option form_name="Map_6">Map_6</cmd_line_option>
+      <cmd_line_option form_name="Map_7">Map_7</cmd_line_option>
+      <cmd_line_option form_name="Map_8">Map_8</cmd_line_option>
+      <cmd_line_option form_name="Map_9">Map_9</cmd_line_option>
+      <cmd_line_option form_name="Map_10">Map_10</cmd_line_option>
+      <cmd_line_option form_name="Map_11">Map_11</cmd_line_option>
+      <cmd_line_option form_name="Map_12">Map_12</cmd_line_option>
+      <cmd_line_option form_name="Map_13">Map_13</cmd_line_option>
+      <cmd_line_option form_name="Map_14">Map_14</cmd_line_option>
+      <cmd_line_option form_name="Map_15">Map_15</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="1">1</cmd_line_option>
+      <cmd_line_option form_name="2">2</cmd_line_option>
+      <cmd_line_option form_name="3">3</cmd_line_option>
+      <cmd_line_option form_name="4">4</cmd_line_option>
+      <cmd_line_option form_name="5">5</cmd_line_option>
+      <cmd_line_option form_name="6">6</cmd_line_option>
+      <cmd_line_option form_name="7">7</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Test 1">
+    <password>t1</password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_Test">Map_Test</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Test 2">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_Test">Map_Test</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="2">2</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="3">3</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Transfer 1">
+    <password>t1</password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_TF">Map_TF</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="9">9</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="10">10</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+
+
+
+  <game form_name="Transfer 2">
+    <password></password>
+    <demorec>true</demorec>
+    <map_choice form_instructions="Choose a map:" cmd_line_parameter="">
+      <cmd_line_option form_name="Map_TF">Map_TF</cmd_line_option>
+    </map_choice>
+    <type_choice form_instructions="Choose a game type:" cmd_line_parameter="Game=">
+      <cmd_line_option form_name="qUTeiDM">qUTei.qUTeiDM</cmd_line_option>
+    </type_choice>
+    <generic_choice form_instructions="Select a game length:" cmd_line_parameter="TimeLimit=">
+      <cmd_line_option form_name="5">5</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Select a difficulty:" cmd_line_parameter="Difficulty=">
+      <cmd_line_option form_name="4">4</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose bonus vehicles or not:" cmd_line_parameter="BonusVehicles=">
+      <cmd_line_option form_name="Bonus Vehicles">false</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose your mutators:" cmd_line_parameter="Mutator=">
+      <cmd_line_option form_name="OLStats">OLStats.MutOLGameStats</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose auto number of bots:" cmd_line_parameter="bAutoNumBots=">
+      <cmd_line_option form_name="False">False</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Number of Bots:" cmd_line_parameter="NumBots=">
+      <cmd_line_option form_name="9">9</cmd_line_option>
+    </generic_choice>
+    <generic_choice form_instructions="Choose Minimum Number of Players:" cmd_line_parameter="MinPlayers=">
+      <cmd_line_option form_name="10">10</cmd_line_option>
+    </generic_choice>
+    <switch>-lanplay</switch>
+    <switch>-server</switch>
+    <switch>-log=qUTei2.log</switch>
+  </game>
+</protocol>
